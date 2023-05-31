@@ -1,0 +1,32 @@
+{% include "header.html" %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1679629595664-87d8ab6f56cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Custom Image Watermarker</h1>
+            <span class="subheading">For Text and Image Watermarks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+      <div>
+        <h2 style="text-align: center">Which option would you like to use?</h2>
+
+        <!-- Navigation Buttons -->
+        <div style="margin: 40px; text-align: center">
+          <a class="btn btn-dark float-center" href="{{url_for('text_watermark')}}" style="margin-right: 20px">Text Watermark</a>
+          <a class="btn btn-dark float-center" href="{{url_for('image_watermark')}}">Image Watermark</a>
+        </div>
+      </div>
+  </div>
+  <hr>
+
+{% include "footer.html" %}
