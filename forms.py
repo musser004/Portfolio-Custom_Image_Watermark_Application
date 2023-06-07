@@ -31,7 +31,8 @@ class TextWatermarkForm(FlaskForm):
     selected_font_size = IntegerField("Text Font Size (Integer)", validators=[
         NumberRange(min=0, max=400, message="Number out of range"),
         Optional()])
-    selected_font_type = StringField("Text Font Type (e.g. \"arial.ttf\")", validators=[Optional()])
+    selected_font_type = StringField("Text Font Type (e.g. \"Arial\", \"times new roman\", etc.)",
+                                     validators=[Optional()])
     rgb1 = IntegerField("Text RGB Values: Red (0 to 255)", validators=[
         NumberRange(min=0, max=255, message="Number out of range"),
         Optional()])
