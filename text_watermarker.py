@@ -1,4 +1,5 @@
 from PIL import Image, ImageFont, ImageDraw
+import matplotlib.font_manager as fm
 
 
 class TextWatermarker:
@@ -15,7 +16,7 @@ class TextWatermarker:
                  selected_msg,
                  selected_txt_position):
         self.image = image
-        self.font = ImageFont.truetype(selected_font_type, selected_font_size)
+        self.font = ImageFont.truetype(fm.findfont(selected_font_type), selected_font_size)
         self.selected_rgb = (rgb1, rgb2, rgb3, transparency)
         self.txt = Image.new("RGBA", image.size, (255, 255, 255, 0))
         self.txt_draw = ImageDraw.Draw(self.txt)
